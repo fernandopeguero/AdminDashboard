@@ -90,10 +90,43 @@ body {
     font-size: 16px;
 }
 
+
+/*  Header */
+
 header {
     background-color: var(--sidebar-text-color);
+    padding: var(--pd-medium) var(--pd-huge);
+
+    nav {
+        display: flex;
+        align-items: center;
+
+        input {
+            margin: 0 var(--pd-medium);
+            max-width: 500px;
+            flex: 1;
+            border-radius: 25px;
+            border: none;
+            background-color: rgb(227, 232, 239);
+            padding-left: var(--pd-medium);
+        }
+
+        span {
+            margin-left: auto;
+        }
+
+        img {
+            margin: 0 var(--pd-medium);
+            border-radius: 50%;
+        }
+    }
+
+
 }
 
+
+
+/* Sidebar  */
 .sidebar {
     background-color: var(--btn-color);
     color: var(--sidebar-text-color);
