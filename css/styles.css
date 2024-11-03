@@ -67,6 +67,7 @@ h6 {
     --sidebar-text-color: #f8fafc;
     --main-text-color: #09090b;
     --sub-text-color: #3f3f46;
+    --main-light-bg-color: rgb(227, 232, 239);
 
     /* Accent color */
     --main-accent-color: #eab308;
@@ -96,6 +97,10 @@ body {
 header {
     background-color: var(--sidebar-text-color);
     padding: var(--pd-medium) var(--pd-huge);
+    -webkit-box-shadow: 0px 10px 10px -5px rgba(171, 168, 171, 1);
+    -moz-box-shadow: 0px 10px 10px -5px rgba(171, 168, 171, 1);
+    box-shadow: 0px 10px 10px -5px rgba(171, 168, 171, 1);
+    z-index: 100;
 
     nav {
         display: flex;
@@ -107,7 +112,7 @@ header {
             flex: 1;
             border-radius: 25px;
             border: none;
-            background-color: rgb(227, 232, 239);
+            background-color: var(--main-light-bg-color);
             padding-left: var(--pd-medium);
         }
 
@@ -127,6 +132,7 @@ header {
         justify-content: space-between;
         margin-top: var(--pd-medium);
         align-items: center;
+
 
         .profile-info {
             display: flex;
@@ -167,6 +173,8 @@ header {
         }
     }
 }
+
+/* Main */
 
 
 
