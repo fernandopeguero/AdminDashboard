@@ -122,6 +122,50 @@ header {
     }
 
 
+    .profile-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: var(--pd-medium);
+        align-items: center;
+
+        .profile-info {
+            display: flex;
+
+            img {
+                margin: 0 var(--pd-medium);
+                border-radius: 50%;
+            }
+
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: var(--pd-medium);
+
+            button {
+                border: none;
+                background-color: var(--btn-color);
+                color: var(--sidebar-text-color);
+                padding: var(--pd-small) var(--pd-large);
+                border-radius: 25px;
+            }
+
+            button:hover {
+                background-color: var(--btn-dark-color);
+                cursor: pointer;
+            }
+
+            button:active {
+                background-color: var(--main-accent-color);
+            }
+
+        }
+    }
 }
 
 
