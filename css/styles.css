@@ -176,6 +176,81 @@ header {
 
 /* Main */
 
+main {
+    background-color: var(--main-light-bg-color);
+    padding: var(--pd-medium) var(--pd-huge);
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: var(--pd-medium);
+
+    .articles {
+        grid-column: 1 / 2;
+
+        ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            padding: 0;
+            gap: var(--pd-medium);
+
+
+            li {
+                background-color: var(--sidebar-text-color);
+                padding: var(--pd-medium);
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                height: 200px;
+                overflow: hidden;
+                position: relative;
+
+                .options {
+                    margin-top: auto;
+                    align-self: flex-end;
+                    display: flex;
+                    gap: var(--pd-small);
+                }
+
+                i {
+                    padding: var(--pd-small);
+                    border-radius: 50%;
+
+                }
+
+                i:hover {
+                    cursor: pointer;
+                    background-color: var(--main-bg-color);
+                }
+
+                i:active {
+                    background-color: var(--main-accent-color);
+                }
+            }
+
+            li::before {
+                background: var(--main-accent-color);
+                content: '';
+                display: block;
+                height: 100%;
+                position: absolute;
+                width: 10px;
+                left: 0px;
+                top: 0;
+                z-index: 50;
+            }
+        }
+    }
+
+    .announcements-container {
+        grid-column: 2 / span(1);
+    }
+
+    .trending-container {
+        grid-column: 2;
+    }
+}
+
 
 
 /* Sidebar  */
