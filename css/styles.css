@@ -187,6 +187,10 @@ main {
     .articles {
         grid-column: 1 / 2;
 
+        h2 {
+            margin-bottom: var(--pd-medium);
+        }
+
         ul {
             list-style: none;
             display: grid;
@@ -197,20 +201,29 @@ main {
 
             li {
                 background-color: var(--sidebar-text-color);
-                padding: var(--pd-medium);
+                padding-left: var(--pd-large);
+                padding-right: var(--pd-medium);
                 border-radius: 10px;
                 display: flex;
                 flex-direction: column;
                 height: 200px;
                 overflow: hidden;
                 position: relative;
+                justify-content: center;
+
+                h3 {
+                    margin-top: var(--pd-medium);
+
+                }
 
                 .options {
                     margin-top: auto;
+                    margin-bottom: var(--pd-medium);
                     align-self: flex-end;
                     display: flex;
                     gap: var(--pd-small);
                 }
+
 
                 i {
                     padding: var(--pd-small);
