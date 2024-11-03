@@ -60,3 +60,29 @@ h6 {
 #__next {
     isolation: isolate;
 }
+
+/* Variables */
+:root {
+    --main-bg-color: '#94a3b8';
+    --sidebar-text-color: '#f8fafc';
+    --main-text-color: '#09090b';
+    --sub-text-color: '#3f3f46';
+
+    /* Accent color */
+    --main-accent-color: '#eab308';
+    --btn-color: '#2563eb';
+
+}
+
+/* general  */
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+
+.sidebar {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
