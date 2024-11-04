@@ -375,3 +375,52 @@ main {
         }
     }
 }
+
+/* Media Queries */
+
+@media (max-width: 1400px) {
+
+    main {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr auto;
+
+        .articles {
+            grid-column: 1 / 3;
+            grid-row: 1/2;
+        }
+
+        .announcements-container {
+            grid-column: 1 / 2;
+            grid-row: 2 / span 1;
+        }
+
+        .trending-container {
+            grid-column: 2 / 3;
+            grid-row: 2 / span 1;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto auto;
+
+        .articles {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+
+        .announcements-container {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+
+        .trending-container {
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+        }
+    }
+
+}
