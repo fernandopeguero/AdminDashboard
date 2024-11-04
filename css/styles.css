@@ -1,6 +1,19 @@
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
 /* 2. Remove default margin */
 * {
     margin: 0;
+    font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
@@ -89,6 +102,7 @@ body {
     grid-template-columns: 1fr 4fr;
     color: var(--main-text-color);
     font-size: 16px;
+    height: 100vh;
 }
 
 
@@ -178,19 +192,19 @@ header {
 
 main {
     background-color: var(--main-light-bg-color);
-    padding: var(--pd-medium) var(--pd-huge);
+    padding: var(--pd-small) var(--pd-medium);
 
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: auto auto;
     gap: var(--pd-medium);
 
     .articles {
         grid-column: 1 / 2;
-        grid-row: 1 / -1;
+        grid-row: 1 / span 2;
 
         h2 {
-            margin-bottom: var(--pd-medium);
+            margin-bottom: var(--pd-small);
         }
 
         ul {
@@ -198,7 +212,7 @@ main {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             padding: 0;
-            gap: var(--pd-medium);
+            gap: var(--pd-small);
 
 
             li {
@@ -214,7 +228,7 @@ main {
                 justify-content: center;
 
                 h3 {
-                    margin-top: var(--pd-medium);
+                    margin-top: var(--pd-small);
 
                 }
 
@@ -258,17 +272,18 @@ main {
     }
 
     .announcements-container {
-        grid-column: 2;
+        grid-column: 2 / 3;
         grid-row: 1 / 2;
 
 
         h2 {
-            margin-bottom: var(--pd-medium);
+            margin-bottom: var(--pd-small);
         }
 
         .announcements {
             border-radius: 10px;
             display: flex;
+            font-size: 0.8rem;
             flex-direction: column;
             gap: var(--pd-medium);
             padding: var(--pd-medium);
@@ -277,12 +292,12 @@ main {
     }
 
     .trending-container {
-        grid-column: 2;
-        grid-row: 2;
-
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
 
         h2 {
-            margin-bottom: var(--pd-medium);
+            margin-top: 0;
+            margin-bottom: var(--pd-small);
         }
 
         .trending {
@@ -290,12 +305,14 @@ main {
             background-color: var(--sidebar-text-color);
             border-radius: 10px;
 
+
             article {
                 display: flex;
 
                 img {
                     border-radius: 50%;
-                    padding-right: var(--pd-medium);
+                    margin-right: var(--pd-medium);
+
                 }
             }
         }
